@@ -113,6 +113,8 @@ void help() {
     cout << "we add soulless dumps here so ppl wont call us weirdos muaheheheheh";
     cout << "me when me when me when me when locale != English" << endl;
     cout << "--configure str,str,int" << endl;
+    cout << "--configure path,distro,mountvol" << endl;
+    cout << "--help" << endl;
     cout << "err code 0 = success, 1 = cannot continue, 2 = could continue but gave no data" << endl;
     cout << "very fragile tool so if it throws a brick at you enjoy your house burnt down bye" << endl;
     exit(0);
@@ -177,7 +179,7 @@ int main(int argc, char* argv[])
             if (path=="" || distro=="" || mountvol==-1)
                 cout << "oh yeah i'd insert a unicode character for broken heart because of your stupidity is what makes your parents DISAPPOINTED for having a chopped child like you who is worse than your neighbor who is 100 times better from the myths";
             if (!configure(path, distro, mountvol)) {
-                cout << "your changes wasnt applied haha bozo";
+                cout << "your changes wasnt applied haha";
                 exit(1);
             } 
             else {
@@ -185,10 +187,16 @@ int main(int argc, char* argv[])
                 exit(0);
             }
         }
-        else help(); // --help or wrong usage will just go here either way
+        else {
+            cout << "wrong usage bozo" << endl;
+            help();
+            exit(1);
+        }
     }
     else if (argc == 2) {
-        cout << "you rapper you need beat da baby outta atlanta so you climb to top of the mount and kaboom amogus published 5 spaceships outside containing yo EVIL mamas... finally they coca cola espuma the entire universe and lingangugli guli gu li wata lingangu lingangu i'm actually so drunk rn like wth am i writitng i swaer if i put this whole goofy arh story on my essay on top 5 best wallwalkers in roblox then i skull emoji wilted rose emoji smth liek that who cares about correctness for a soulless dump btw i was gonna bomb ur house but i hav to speak to you abt your lazyness in typin cmds lmao bye";
+        cout << "you rapper you need beat da baby outta atlanta so you climb to top of the mount and kaboom amogus published 5 spaceships outside containing yo EVIL mamas... finally they coca cola espuma the entire universe and lingangugli guli gu li wata lingangu lingangu i'm actually so drunk rn like wth am i writitng i swaer if i put this whole goofy arh story on my essay on top 5 best wallwalkers in roblox then i skull emoji wilted rose emoji smth liek that who cares about correctness for a soulless dump btw i was gonna bomb ur house until i realizd you ned two leart their commands so";
+        cout << endl;
+        help();
         exit(1);
     }
     else {
